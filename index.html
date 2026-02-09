@@ -1,0 +1,495 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio de Youssef Bergam - BTS SIO SISR : stages, projets, TP, compétences." />
+
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Portfolio de Youssef Bergam</title>
+
+  <style>
+    html { scroll-behavior: smooth; }
+
+    .cv-documents {
+      margin-top: 2rem;
+      padding-top: 1rem;
+      border-top: 1px solid #ccc;
+    }
+    .cv-documents h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
+    .cv-documents ul { list-style: none; padding-left: 0; }
+    .cv-documents li { margin: 0.5rem 0; }
+    .cv-documents a { text-decoration: none; color: #007bff; }
+    .cv-documents a:hover { text-decoration: underline; }
+  </style>
+</head>
+
+<body>
+  <div id="progress" aria-hidden="true"></div>
+
+  <button id="toTop" class="to-top" aria-label="Retour en haut">
+    <i class="ri-arrow-up-line"></i>
+  </button>
+
+  <div id="backdrop" class="backdrop" aria-hidden="true"></div>
+
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="navbar__logo"><i class="ri-code-s-slash-line"></i> Youssef.</a>
+
+    <div class="navbar__menu" id="navbarMenu">
+      <a href="#hero" class="navbar__link">Accueil</a>
+      <a href="#about" class="navbar__link">Profil</a>
+      <a href="#stages" class="navbar__link">Stages</a>
+      <a href="#projets" class="navbar__link">Projets</a>
+      <a href="#competences" class="navbar__link">Compétences</a>
+
+      <!-- ✅ AJOUTS -->
+      <a href="#autoformation" class="navbar__link">Autoformation</a>
+      <a href="#competences-bts" class="navbar__link">6 compétences (E5)</a>
+
+      <a href="veille.html" class="navbar__link">Veille</a>
+      <a href="#contact" class="navbar__link">Contact</a>
+      <a href="#cv-lettre" class="navbar__link">CV & Lettre</a>
+    </div>
+
+    <div class="navbar__actions">
+      <div class="navbar__location">
+        <h5>France, Paris</h5>
+        <p id="heure">--:--</p>
+      </div>
+
+      <button class="btn" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
+        Contactez-moi
+      </button>
+
+      <button class="navbar__toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <i class="ri-menu-line"></i>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#hero" class="mobile-link">Accueil</a>
+    <a href="#about" class="mobile-link">Profil</a>
+    <a href="#stages" class="mobile-link">Stages</a>
+    <a href="#projets" class="mobile-link">Projets</a>
+    <a href="#competences" class="mobile-link">Compétences</a>
+
+    <!-- ✅ AJOUTS -->
+    <a href="#autoformation" class="mobile-link">Autoformation</a>
+    <a href="#competences-bts" class="mobile-link">6 compétences (E5)</a>
+
+    <a href="veille.html" class="mobile-link">Veille</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+    <a href="#cv-lettre" class="mobile-link">CV & Lettre</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero" class="hero reveal">
+    <div class="hero__content">
+      <h2>Bonjour ! Je suis Youssef Bergam</h2>
+      <p class="hero__subtitle">Étudiant en BTS SIO (SISR) — systèmes, réseaux, support & cybersécurité</p>
+    </div>
+
+    <div class="hero__actions">
+      <button class="btn btn--secondary" onclick="document.getElementById('projets').scrollIntoView({ behavior: 'smooth' })">
+        Voir mes projets
+      </button>
+      <a class="btn" href="mailto:ybergam93@gmail.com">Envoyer un mail</a>
+      <a class="btn btn--secondary" href="veille.html">Voir ma veille</a>
+    </div>
+
+    <div class="hero__socials">
+      <a href="https://www.linkedin.com/in/youssef-bergam-326b6636a" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <i class="ri-linkedin-box-line"></i>
+      </a>
+    </div>
+
+    <div class="hero__chips">
+      <span class="chip"><i class="ri-shield-check-line"></i> Cyber</span>
+      <span class="chip"><i class="ri-global-line"></i> Réseaux</span>
+      <span class="chip"><i class="ri-server-line"></i> Systèmes</span>
+      <span class="chip"><i class="ri-customer-service-2-line"></i> Support</span>
+    </div>
+  </section>
+
+  <!-- PROFIL -->
+  <section id="about" class="about reveal">
+    <div class="section-head">
+      <h3>Profil</h3>
+      <p>Un aperçu rapide pour situer le parcours et le positionnement.</p>
+    </div>
+
+    <div class="cards">
+      <article class="card reveal">
+        <div class="card__icon"><i class="ri-user-3-line"></i></div>
+        <h4>Objectif</h4>
+        <p>Mettre en avant des réalisations concrètes : support, infra, réseau, sécurité et documentation.</p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__icon"><i class="ri-tools-line"></i></div>
+        <h4>Compétences</h4>
+        <p>Déploiement de postes, dépannage, configuration réseau (VLAN, NAT…), virtualisation, sécurité.</p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__icon"><i class="ri-file-text-line"></i></div>
+        <h4>Preuves</h4>
+        <p>Stages + projets + TP téléchargeables pour appuyer les compétences demandées en BTS.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- STAGES -->
+  <section id="stages" class="showcase reveal">
+    <div class="showcase__header">
+      <h3>Stages</h3>
+      <button class="btn" onclick="document.getElementById('projets').scrollIntoView({ behavior: 'smooth' })">
+        Voir les projets & TP
+      </button>
+    </div>
+
+    <div class="showcase_categories">
+      <!-- Stage n°1 -->
+      <section class="category reveal">
+        <div class="category__header">
+          <div class="category__title">
+            <i class="ri-folder-line"></i>
+            <h4>Stage n°1 - Région Île-de-France</h4>
+          </div>
+
+          <div class="category__desc">
+            <div class="stage-desc-top">
+              <div class="stage-desc-text">
+                <p>
+                  Stage n°1 à la <strong>Région Île-de-France</strong> (pôle <strong>Transformation Numérique</strong>),
+                  à Saint-Ouen, du <strong>26 mai au 27 juin 2025</strong>.
+                </p>
+
+                <ul>
+                  <li>Découverte du SI (outils, workflows, gestion documentaire…)</li>
+                  <li>Participation à des réunions d’équipe (suivi projets & logiciels métier)</li>
+                  <li>Initiation à la cybersécurité en administration publique</li>
+                  <li>Observation d’un projet de dématérialisation</li>
+                  <li>Soutien technique (tests, mises à jour, classement numérique…)</li>
+                </ul>
+
+                <p>📄 <a href="Rapport%20de%20stage.pdf" target="_blank" download>Télécharger mon rapport de stage</a></p>
+              </div>
+
+              <img class="stage-logo" src="logo-region-ile-de-france.png" alt="Logo Région Île-de-France">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stage n°2 -->
+      <section class="category reveal">
+        <div class="category__header">
+          <div class="category__title">
+            <i class="ri-folder-line"></i>
+            <h4>Stage n°2 - Université Paris Cité</h4>
+          </div>
+
+          <div class="category__desc">
+            <div class="stage-desc-top">
+              <div class="stage-desc-text">
+
+                <!-- ✅ MODIFIÉ : basé sur 9 premiers jours -->
+                <p>
+                  Stage n°2 du <strong>12 janvier au 20 février 2026</strong> :
+                  <strong>support informatique de proximité</strong> (déploiement, dépannage, maintenance, examens).
+                  <br><strong>Bilan basé sur mes 9 premiers jours (12/01 → 22/01/2026).</strong>
+                </p>
+
+                <ul>
+                  <li>Déploiement de postes (Windows 11 / Ubuntu) + installation des logiciels via <strong>scripts</strong></li>
+                  <li>Support utilisateurs : incidents réseau, imprimantes, périphériques, sessions</li>
+                  <li>Interventions en salles informatiques : connectique, réseau enseignant, webcam/micro</li>
+                  <li>Mises à jour : Windows Update + antivirus sur postes de salles</li>
+                  <li>Remédiation sécurité : traitement d’une session avec <strong>détection de malwares</strong></li>
+                  <li>Déploiement de <strong>tablettes en mode examen</strong> (restrictions + Evalbox/Firefox)</li>
+                  <li>Réseau : <strong>attribution VLAN</strong> + brassage de ports en baie</li>
+                  <li>Gestion d’incident : panne réseau après coupure électrique + mise en place d’onduleurs de secours</li>
+                  <li>Maintenance matérielle : pâte thermique processeur, interventions sur postes</li>
+                </ul>
+
+              </div>
+
+              <img class="stage-logo stage-logo--wide"
+                   src="universitepariscite-logo-horizontal-couleur-rvb.png"
+                   alt="Logo Université Paris Cité">
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- PROJETS -->
+  <section id="projets" class="projects reveal">
+    <div class="section-head">
+      <h3>Projets & TP</h3>
+      <p>Documents téléchargeables + réalisations pédagogiques.</p>
+    </div>
+
+    <div class="tp-downloads reveal">
+      <h5>Projets</h5>
+      <ul class="tp-list">
+        <li><a class="tp-link" href="GSB%20Mission%201.docx" download target="_blank">📄 GSB Mission 1</a></li>
+        <li><a class="tp-link" href="Doc%20technique%20GSB%20Mission%202.pdf" download target="_blank">📄 GSB Mission 2</a></li>
+      </ul>
+    </div>
+
+    <div class="tp-downloads reveal">
+      <h5>Bloc 2 - Administration des systèmes et des réseaux</h5>
+      <ul class="tp-list">
+        <li><a class="tp-link" href="TP%200%20Youssef.docx" download target="_blank">📄 TP Maintenance et optimisation OS</a></li>
+        <li><a class="tp-link" href="TP%20NAT%20Youssef.docx" download target="_blank">📄 TP NAT / PAT</a></li>
+        <li><a class="tp-link" href="TP%20AD%20Youssef.docx" download target="_blank">📄 Active Directory</a></li>
+        <li><a class="tp-link" href="TP%20AD%202%20BERGAM%20Questions.docx" download target="_blank">📄 Active Directory 2</a></li>
+        <li><a class="tp-link" href="TP%20AD%203%20BERGAM.docx" download target="_blank">📄 Active Directory 3</a></li>
+        <li><a class="tp-link" href="AD4%20Youssef.docx" download target="_blank">📄 Active Directory 4</a></li>
+        <li><a class="tp-link" href="TP%204%20Routeur%20Youssef.docx" download target="_blank">📄 TP Routeur</a></li>
+      </ul>
+    </div>
+
+    <div class="tp-downloads reveal">
+      <h5>Cybersécurité</h5>
+      <ul class="tp-list">
+        <li><a class="tp-link" href="TP%20Tails.docx" download target="_blank">📄 TP Tails</a></li>
+        <li><a class="tp-link" href="TP%203%20CYBER%20Youssef.docx" download target="_blank">📄 TP Extensions</a></li>
+        <li><a class="tp-link" href="TP%204%20Cookie.docx" download target="_blank">📄 TP Cookie</a></li>
+        <li><a class="tp-link" href="Compte_Rendu_Youssef_Kali.docx" download target="_blank">📄 TP Kali</a></li>
+        <li><a class="tp-link" href="MAJ%20PC%20Youssef.xlsx" download target="_blank">📄 TP MAJ PC</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- COMPETENCES -->
+  <section id="competences" class="skills reveal">
+    <div class="skills__desc">
+      <h3>Compétences – BTS SIO (SISR)</h3>
+      <p>Support, systèmes, réseaux, sécurité, déploiement et documentation.</p>
+
+      <div class="skills__actions">
+        <a class="btn btn--secondary" href="mailto:ybergam93@gmail.com">Envoyer un mail</a>
+        <a class="btn btn--secondary" href="veille.html">Veille technologique</a>
+      </div>
+    </div>
+
+    <div class="skills__stats">
+      <i class="ri-customer-service-2-line"></i>
+      <div class="skill__info">
+        <h5>Support & Incidents (N1)</h5>
+        <p>Diagnostic, résolution, assistance utilisateurs</p>
+      </div>
+
+      <i class="ri-windows-line"></i>
+      <div class="skill__info">
+        <h5>Systèmes</h5>
+        <p>Windows & Linux, maintenance, déploiement</p>
+      </div>
+
+      <i class="ri-global-line"></i>
+      <div class="skill__info">
+        <h5>Réseaux</h5>
+        <p>Routeurs, switches, VLAN, adressage IP</p>
+      </div>
+
+      <i class="ri-shield-check-line"></i>
+      <div class="skill__info">
+        <h5>Sécurité</h5>
+        <p>Bonnes pratiques, sensibilisation, éthique</p>
+      </div>
+
+      <i class="ri-server-line"></i>
+      <div class="skill__info">
+        <h5>Virtualisation</h5>
+        <p>VMware Workstation, VirtualBox</p>
+      </div>
+
+      <i class="ri-terminal-box-line"></i>
+      <div class="skill__info">
+        <h5>Déploiement & Scripts</h5>
+        <p>Installation logiciels via scripts, préparation de postes</p>
+      </div>
+
+      <i class="ri-file-text-line"></i>
+      <div class="skill__info">
+        <h5>Documentation & Suivi</h5>
+        <p>Documentation technique, suivi de demandes (ITSM)</p>
+      </div>
+
+      <i class="ri-code-box-line"></i>
+      <div class="skill__info">
+        <h5>Web (bases)</h5>
+        <p>HTML, CSS (notions)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ AUTOFORMATION -->
+  <section id="autoformation" class="about reveal">
+    <div class="section-head">
+      <h3>Autoformation</h3>
+      <p>Formations et apprentissages personnels (complément du BTS SIO SISR).</p>
+    </div>
+
+    <div class="cards">
+      <article class="card reveal">
+        <div class="card__icon"><i class="ri-windows-line"></i></div>
+        <h4>Windows / AD</h4>
+        <p>Approfondissement : comptes, GPO, bonnes pratiques, dépannage et administration.</p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__icon"><i class="ri-global-line"></i></div>
+        <h4>Réseaux</h4>
+        <p>Adressage IP, VLAN, NAT/PAT, diagnostic connectique et équipements.</p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__icon"><i class="ri-shield-check-line"></i></div>
+        <h4>Cybersécurité</h4>
+        <p>Notions : durcissement, mises à jour, hygiène numérique, incidents (malwares).</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- ✅ 6 COMPÉTENCES BTS SIO (E5) -->
+  <section id="competences-bts" class="bts6 reveal">
+    <div class="section-head">
+      <h3>6 compétences BTS SIO – preuves (E5)</h3>
+      <p>Chaque compétence pointe vers des preuves : stages, projets, TP, veille.</p>
+
+      <!-- ✅ AJOUT : lien tableau Excel juste sous le texte -->
+      <p style="margin-top: 0.8rem;">
+        <a class="btn btn--secondary" href="Tableau_synthese_E5_Youssef_BERGAM_2026.xlsx" download target="_blank">
+          📊 Télécharger mon tableau E5 (Excel)
+        </a>
+      </p>
+    </div>
+
+    <div class="bts-grid">
+      <article class="bts-card reveal">
+        <h4>1) Gérer le patrimoine informatique</h4>
+        <p>Maintenance, inventaire, matériel, continuité, sécurité de base.</p>
+        <div class="bts-links">
+          <a class="bts-link" href="#stages">Stage (matériel / réseau / onduleurs)</a>
+          <a class="bts-link" href="TP%20AD%20Youssef.docx" target="_blank" download>TP Active Directory</a>
+          <a class="bts-link" href="TP%20NAT%20Youssef.docx" target="_blank" download>TP NAT/PAT</a>
+        </div>
+      </article>
+
+      <article class="bts-card reveal">
+        <h4>2) Répondre aux incidents & demandes</h4>
+        <p>Support utilisateurs, dépannage imprimantes, sessions, réseau, périphériques.</p>
+        <div class="bts-links">
+          <a class="bts-link" href="#stages">Stage (support proximité)</a>
+          <a class="bts-link" href="#contact">Contact / posture pro</a>
+        </div>
+      </article>
+
+      <article class="bts-card reveal">
+        <h4>3) Développer la présence en ligne</h4>
+        <p>Création et amélioration du portfolio (structure, preuves, téléchargement).</p>
+        <div class="bts-links">
+          <a class="bts-link" href="#hero">Portfolio (site)</a>
+          <a class="bts-link" href="veille.html">Page Veille</a>
+        </div>
+      </article>
+
+      <!-- ✅ MODIFIÉ : basé sur le 1er stage (Région IDF) -->
+      <article class="bts-card reveal">
+        <h4>4) Travailler en mode projet</h4>
+        <p>
+          Participation à la vie d’un pôle numérique : réunions de suivi, observation d’un projet de
+          dématérialisation, compréhension des étapes d’un projet (besoin → solutions → tests → validation)
+          et appui sur des tâches techniques/documentaires.
+        </p>
+        <div class="bts-links">
+          <a class="bts-link" href="#stages">Stage 1 (Région IDF / suivi projets)</a>
+          <a class="bts-link" href="Rapport%20de%20stage.pdf" target="_blank" download>Rapport de stage (PDF)</a>
+          <a class="bts-link" href="#projets">Projets & TP (preuves)</a>
+        </div>
+      </article>
+
+      <article class="bts-card reveal">
+        <h4>5) Mettre à disposition un service</h4>
+        <p>Déploiement de postes, installation via scripts, mise en production pour utilisateurs.</p>
+        <div class="bts-links">
+          <a class="bts-link" href="#stages">Stage (déploiement postes)</a>
+          <a class="bts-link" href="#projets">TP systèmes/réseaux</a>
+        </div>
+      </article>
+
+      <article class="bts-card reveal">
+        <h4>6) Organiser son développement pro</h4>
+        <p>Veille, autoformation, identité pro (LinkedIn/CV), capitalisation.</p>
+        <div class="bts-links">
+          <a class="bts-link" href="veille.html">Veille</a>
+          <a class="bts-link" href="#autoformation">Autoformation</a>
+          <a class="bts-link" href="#cv-lettre">CV & Lettre</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact reveal">
+    <h5>Vous avez un projet ?</h5>
+    <h2>Contactez-moi !</h2>
+
+    <a class="btn" href="mailto:ybergam93@gmail.com">Envoyer un message</a>
+
+    <p>Email : <a href="mailto:ybergam93@gmail.com"><span>ybergam93@gmail.com</span></a></p>
+
+    <p>
+      LinkedIn :
+      <a href="https://www.linkedin.com/in/youssef-bergam-326b6636a"
+         target="_blank" rel="noopener noreferrer"
+         style="font-size: 24px; color: #0077b5; vertical-align: middle;">
+        <i class="ri-linkedin-box-line"></i>
+      </a>
+    </p>
+
+    <div id="cv-lettre" class="cv-documents">
+      <h3>Téléchargements</h3>
+      <p>Vous pouvez consulter ou télécharger mes documents ci-dessous :</p>
+      <ul>
+        <li><a href="CV%20professionnel%20gris%20simple%20(1).pdf" download target="_blank">📄 Télécharger mon CV</a></li>
+        <li><a href="Lettre%20de%20motivation%20BERGAM%20SIO.pdf" download target="_blank">📄 Télécharger ma lettre de motivation</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <a href="#hero">Youssef.</a>
+      <p>© 2025 Youssef Bergam - Portfolio BTS SIO.</p>
+    </div>
+    <div class="footer__links">
+      <a href="#hero">Accueil</a>
+      <a href="#about">Profil</a>
+      <a href="#stages">Stages</a>
+      <a href="#projets">Projets</a>
+      <a href="#competences">Compétences</a>
+
+      <!-- ✅ AJOUTS -->
+      <a href="#autoformation">Autoformation</a>
+      <a href="#competences-bts">6 compétences (E5)</a>
+
+      <a href="veille.html">Veille</a>
+      <a href="#contact">Contact</a>
+      <a href="#cv-lettre">CV & Lettre</a>
+    </div>
+  </footer>
+
+  <script src="javascript.js" defer></script>
+</body>
+</html>
