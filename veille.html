@@ -1,0 +1,235 @@
+<!-- veille.html -->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Veille technologique - BTS SIO SISR (Google Alerts, synthèse annuelle, preuves)." />
+
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />
+  <link rel="stylesheet" href="style.css" />
+
+  <title>Veille technologique - Youssef Bergam</title>
+
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+
+<body>
+  <div id="progress" aria-hidden="true"></div>
+
+  <button id="toTop" class="to-top" aria-label="Retour en haut">
+    <i class="ri-arrow-up-line"></i>
+  </button>
+
+  <div id="backdrop" class="backdrop" aria-hidden="true"></div>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <a href="index.html#hero" class="navbar__logo"><i class="ri-code-s-slash-line"></i> Youssef.</a>
+
+    <div class="navbar__menu" id="navbarMenu">
+      <a href="index.html#hero" class="navbar__link">Accueil</a>
+      <a href="index.html#about" class="navbar__link">Profil</a>
+      <a href="index.html#stages" class="navbar__link">Stages</a>
+      <a href="index.html#projets" class="navbar__link">Projets</a>
+      <a href="index.html#competences" class="navbar__link">Compétences</a>
+      <a href="veille.html" class="navbar__link active">Veille</a>
+      <a href="index.html#contact" class="navbar__link">Contact</a>
+      <a href="index.html#cv-lettre" class="navbar__link">CV & Lettre</a>
+    </div>
+
+    <div class="navbar__actions">
+      <div class="navbar__location">
+        <h5>France, Paris</h5>
+        <p id="heure">--:--</p>
+      </div>
+
+      <a class="btn" href="mailto:ybergam93@gmail.com">Contact</a>
+
+      <button class="navbar__toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <i class="ri-menu-line"></i>
+      </button>
+    </div>
+  </nav>
+
+  <!-- MENU MOBILE -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="index.html#hero" class="mobile-link">Accueil</a>
+    <a href="index.html#about" class="mobile-link">Profil</a>
+    <a href="index.html#stages" class="mobile-link">Stages</a>
+    <a href="index.html#projets" class="mobile-link">Projets</a>
+    <a href="index.html#competences" class="mobile-link">Compétences</a>
+    <a href="veille.html" class="mobile-link">Veille</a>
+    <a href="index.html#contact" class="mobile-link">Contact</a>
+    <a href="index.html#cv-lettre" class="mobile-link">CV & Lettre</a>
+  </div>
+
+  <!-- HERO VEILLE -->
+  <section class="page-hero reveal" id="top">
+    <div class="page-hero__inner">
+      <h1>Veille technologique</h1>
+      <p class="page-hero__subtitle">
+        Veille BTS SIO (SISR) : je collecte via Google Alerts et je prépare une <strong>synthèse annuelle</strong>
+        (ce qui a changé en 1 an) sur mes <strong>2 sujets</strong> pour l’oral E5.
+      </p>
+
+      <div class="page-hero__chips">
+        <span class="chip"><i class="ri-building-2-line"></i> Attaques organisations</span>
+        <span class="chip"><i class="ri-bug-2-line"></i> Zero-day / CVE</span>
+        <span class="chip"><i class="ri-windows-line"></i> Windows / AD</span>
+        <span class="chip"><i class="ri-shield-check-line"></i> Mesures de protection</span>
+      </div>
+    </div>
+  </section>
+
+  <main class="veille-wrap">
+
+    <!-- BLOC 1 -->
+    <section class="veille-section cardlike reveal" id="sujets">
+      <div class="veille-section__head">
+        <h2><i class="ri-book-2-line"></i> Mes 2 sujets de veille (explication simple)</h2>
+        <p>Objectif : être capable d’expliquer au jury “ce qui a changé en 1 an” + l’impact sur un contexte SISR.</p>
+      </div>
+
+      <div class="veille-grid">
+        <div class="veille-box">
+          <h3>1) Attaques informatiques contre les organisations</h3>
+          <p>
+            Je surveille les attaques visant les entreprises/collectivités/universités :
+            <strong>ransomware</strong>, phishing, fuite de données, attaques sur services exposés (VPN/RDP/messagerie).
+          </p>
+          <ul>
+            <li><strong>Pourquoi c’est utile (SISR)</strong> : protéger les postes, serveurs, AD, sauvegardes, et limiter l’impact.</li>
+            <li><strong>Ce que je retiens</strong> : méthodes d’attaque + points faibles + bonnes pratiques de défense.</li>
+          </ul>
+        </div>
+
+        <div class="veille-box">
+          <h3>2) Zero-day / vulnérabilités critiques (CVE)</h3>
+          <p>
+            Je surveille les <strong>failles critiques</strong> (dont zero-day) pouvant impacter Windows/Active Directory
+            et les logiciels utilisés en entreprise.
+          </p>
+          <ul>
+            <li><strong>Pourquoi c’est utile (SISR)</strong> : prioriser les patchs, appliquer des mitigations, réduire la surface d’attaque.</li>
+            <li><strong>Ce que je retiens</strong> : produit touché + niveau de risque + action (patch/mitigation).</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUTILS -->
+    <section class="veille-section cardlike reveal" id="outils">
+      <div class="veille-section__head">
+        <h2><i class="ri-tools-line"></i> Outils utilisés</h2>
+        <p>Je reste simple : Google Alerts + archivage de preuves (captures).</p>
+      </div>
+
+      <div class="veille-grid">
+        <div class="veille-box">
+          <h3>Google Alerts</h3>
+          <ul>
+            <li>Alertes par mots-clés : ransomware, attaque organisation, zero-day, CVE, Windows, Active Directory…</li>
+            <li>Réception par email (récapitulatif quotidien/hebdo)</li>
+            <li>Ajustement des alertes selon la pertinence</li>
+          </ul>
+        </div>
+
+        <div class="veille-box">
+          <h3>Preuves (pour le dossier)</h3>
+          <ul>
+            <li>Captures : création d’alertes + email reçu</li>
+            <li>Petites notes : “ce qui a changé” + “mesures possibles”</li>
+            <li>Archivage dans un dossier “Veille”</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEMPLATE -->
+    <section class="veille-section cardlike reveal" id="template">
+      <div class="veille-section__head">
+        <h2><i class="ri-file-list-3-line"></i> Template (pour préparer l’oral)</h2>
+        <p>Une fiche simple, orientée “ce qui change + impact + actions”.</p>
+      </div>
+
+      <div class="template-card">
+        <div class="template-row"><span>Sujet :</span> <em>Attaques organisations / Zero-day (CVE)</em></div>
+        <div class="template-row"><span>Info retenue :</span> <em>...</em></div>
+        <div class="template-row"><span>Résumé (3–5 lignes) :</span> <em>...</em></div>
+        <div class="template-row"><span>Ce qui a changé (par rapport à avant) :</span> <em>...</em></div>
+        <div class="template-row"><span>Impact (SISR) :</span> <em>...</em></div>
+        <div class="template-row"><span>Mesures / actions :</span> <em>Patch / MFA / durcissement / sauvegardes / segmentation / sensibilisation</em></div>
+        <div class="template-row"><span>Preuve :</span> <em>Capture email / capture alerte</em></div>
+      </div>
+    </section>
+
+    <!-- CAPTURES -->
+    <section class="veille-section cardlike reveal" id="captures">
+      <div class="veille-section__head">
+        <h2><i class="ri-image-2-line"></i> Captures (preuves)</h2>
+        <p>Preuves visibles : alertes configurées + email d’alerte reçu.</p>
+      </div>
+
+      <div class="shots-grid">
+        <figure class="shot">
+          <img src="Param%C3%A8tres%20alertes.png" alt="Paramètres Google Alerts">
+          <figcaption>✅ Paramètres / récapitulatif des notifications</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <img src="Cr%C3%A9ation%20alertes.png" alt="Création d’une alerte Google Alerts">
+          <figcaption>✅ Création d’une alerte (requête + aperçu)</figcaption>
+        </figure>
+
+        <figure class="shot">
+          <img src="Liste%20alertes.png" alt="Liste des alertes Google Alerts">
+          <figcaption>✅ Liste des alertes configurées</figcaption>
+        </figure>
+      </div>
+
+      <!-- ✅ Email d’alerte reçu -->
+      <div class="shots-grid" style="margin-top: 1rem;">
+        <figure class="shot">
+          <img src="Capture%20d%27%C3%A9cran%202026-02-06%20105530.png" alt="Email Google Alerts - récapitulatif quotidien">
+          <figcaption>✅ Email d’alerte reçu (Google Alerts – récapitulatif quotidien)</figcaption>
+        </figure>
+
+        <div class="shot placeholder">
+          <h4>🔜 Synthèse annuelle (oral E5)</h4>
+          <p>1 page : “ce qui a changé en 1 an” sur mes 2 sujets + mesures SISR.</p>
+        </div>
+
+        <div class="shot placeholder">
+          <h4>🔜 Preuve d’action (exemple)</h4>
+          <p>Ex : checklist patch management / MFA / sauvegardes / durcissement.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="veille-cta reveal">
+      <a class="btn btn--secondary" href="index.html#projets">Retour aux Projets & TP</a>
+      <a class="btn" href="mailto:ybergam93@gmail.com">Me contacter</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <a href="index.html#hero">Youssef.</a>
+      <p>© 2025 Youssef Bergam - Portfolio BTS SIO.</p>
+    </div>
+    <div class="footer__links">
+      <a href="index.html#hero">Accueil</a>
+      <a href="index.html#stages">Stages</a>
+      <a href="index.html#projets">Projets</a>
+      <a href="veille.html">Veille</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </footer>
+
+  <script src="javascript.js" defer></script>
+</body>
+</html>
