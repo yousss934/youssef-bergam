@@ -355,7 +355,7 @@ body{
 }
 .stage-logo--wide{width:230px;}
 
-/* ✅ Illustrations placeholders */
+/* Illustrations placeholders */
 .stage-media{
   margin-top:1rem;
   padding-top:1rem;
@@ -397,7 +397,6 @@ body{
   padding:0 2rem;
 }
 
-/* Catégories TP en vert */
 .tp-downloads > h5{
   font-size:1.1rem;
   font-weight:950;
@@ -405,11 +404,9 @@ body{
   margin-bottom:.55rem;
 }
 
-/* Liste */
 .tp-list{list-style:none;padding:0;margin:0;}
 .tp-list li{margin:.45rem 0;}
 
-/* Noms des TP en bleu */
 .tp-link{
   font-size:1rem;
   color: var(--tp-blue);
@@ -450,7 +447,7 @@ body{
 .skill__info h5{font-weight:900;color:var(--text);margin-bottom:.2rem;}
 .skill__info p{font-size:.92rem;color:var(--muted2);}
 
-/* ✅ 6 compétences BTS */
+/* 6 compétences BTS */
 .bts6{
   padding:3.6rem 0 3.4rem;
   background:#f1f5f9;
@@ -583,16 +580,12 @@ body{
   .footer{flex-direction:column;text-align:center;}
 }
 
-/* Reduce motion */
 @media (prefers-reduced-motion: reduce){
   html{scroll-behavior:auto;}
   *{transition:none !important;animation:none !important;}
 }
 
-/* =========================
-   VEILLE (veille.html)
-   ========================= */
-
+/* VEILLE */
 .page-hero{
   padding:3.8rem 2rem 2.8rem;
   background:linear-gradient(135deg, #111 0%, #0b1220 100%);
@@ -810,7 +803,6 @@ body{
   flex-wrap:wrap;
 }
 
-/* Responsive veille */
 @media (max-width: 900px){
   .veille-grid{grid-template-columns:1fr;}
   .shots-grid{grid-template-columns:1fr;}
