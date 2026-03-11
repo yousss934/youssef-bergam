@@ -13,17 +13,6 @@
 
   <style>
     html { scroll-behavior: smooth; }
-
-    .cv-documents {
-      margin-top: 2rem;
-      padding-top: 1rem;
-      border-top: 1px solid #ccc;
-    }
-    .cv-documents h3 { font-size: 1.5rem; margin-bottom: 0.5rem; }
-    .cv-documents ul { list-style: none; padding-left: 0; }
-    .cv-documents li { margin: 0.5rem 0; }
-    .cv-documents a { text-decoration: none; color: #007bff; }
-    .cv-documents a:hover { text-decoration: underline; }
   </style>
 </head>
 
@@ -45,14 +34,10 @@
       <a href="#stages" class="navbar__link">Stages</a>
       <a href="#projets" class="navbar__link">Projets</a>
       <a href="#competences" class="navbar__link">Compétences</a>
-
-      <!-- ✅ AJOUTS -->
       <a href="#autoformation" class="navbar__link">Autoformation</a>
+      <a href="#veille" class="navbar__link">Veille</a>
       <a href="#competences-bts" class="navbar__link">6 compétences (E5)</a>
-
-      <a href="veille.html" class="navbar__link">Veille</a>
       <a href="#contact" class="navbar__link">Contact</a>
-      <a href="#cv-lettre" class="navbar__link">CV & Lettre</a>
     </div>
 
     <div class="navbar__actions">
@@ -77,14 +62,10 @@
     <a href="#stages" class="mobile-link">Stages</a>
     <a href="#projets" class="mobile-link">Projets</a>
     <a href="#competences" class="mobile-link">Compétences</a>
-
-    <!-- ✅ AJOUTS -->
     <a href="#autoformation" class="mobile-link">Autoformation</a>
+    <a href="#veille" class="mobile-link">Veille</a>
     <a href="#competences-bts" class="mobile-link">6 compétences (E5)</a>
-
-    <a href="veille.html" class="mobile-link">Veille</a>
     <a href="#contact" class="mobile-link">Contact</a>
-    <a href="#cv-lettre" class="mobile-link">CV & Lettre</a>
   </div>
 
   <!-- HERO -->
@@ -99,7 +80,7 @@
         Voir mes projets
       </button>
       <a class="btn" href="mailto:ybergam93@gmail.com">Envoyer un mail</a>
-      <a class="btn btn--secondary" href="veille.html">Voir ma veille</a>
+      <a class="btn btn--secondary" href="#veille">Voir ma veille</a>
     </div>
 
     <div class="hero__socials">
@@ -121,6 +102,9 @@
     <div class="section-head">
       <h3>Profil</h3>
       <p>Un aperçu rapide pour situer le parcours et le positionnement.</p>
+      <p style="margin-top: 0.8rem;">
+        <a class="btn btn--secondary" href="CV%20professionnel%20gris%20simple%20(1).pdf" download target="_blank">📄 Télécharger mon CV</a>
+      </p>
     </div>
 
     <div class="cards">
@@ -178,9 +162,7 @@
                   <li>Soutien technique (tests, mises à jour, classement numérique…)</li>
                 </ul>
 
-                <p>📄 <a href="Rapport%20de%20stage.pdf" target="_blank" download>Télécharger mon rapport de stage (Région Île-de-France)
-                </a>
-                </p>
+                <p>📄 <a href="Rapport%20de%20stage.pdf" target="_blank" download>Télécharger mon rapport de stage (Région Île-de-France)</a></p>
               </div>
 
               <img class="stage-logo" src="logo-region-ile-de-france.png" alt="Logo Région Île-de-France">
@@ -200,8 +182,6 @@
           <div class="category__desc">
             <div class="stage-desc-top">
               <div class="stage-desc-text">
-
-                <!-- ✅ MODIFIÉ : résumé basé sur l'ensemble du stage -->
                 <p>
                   Stage n°2 du <strong>12 janvier au 20 février 2026</strong> :
                   <strong>support informatique de proximité</strong> (déploiement, salles informatiques, réseau, maintenance, examens).
@@ -221,13 +201,11 @@
                   <li>Support pédagogique : paramétrage casque VR (Meta Quest 3 / HTC Vive) + correction d’un bug de collision dans une application de cours</li>
                 </ul>
 
-                <!-- ✅ AJOUT : lien de téléchargement du rapport Paris Cité -->
                 <p style="margin-top: 0.8rem;">
                   📄 <a href="Rapport%20de%20stage%20Youssef%20Bergam%20Paris%20cit%C3%A9.pdf" target="_blank" download>
                     Télécharger mon rapport de stage (Université Paris Cité)
                   </a>
                 </p>
-
               </div>
 
               <img class="stage-logo stage-logo--wide"
@@ -288,7 +266,7 @@
 
       <div class="skills__actions">
         <a class="btn btn--secondary" href="mailto:ybergam93@gmail.com">Envoyer un mail</a>
-        <a class="btn btn--secondary" href="veille.html">Veille technologique</a>
+        <a class="btn btn--secondary" href="#veille">Veille technologique</a>
       </div>
     </div>
 
@@ -343,7 +321,7 @@
     </div>
   </section>
 
-  <!-- ✅ AUTOFORMATION -->
+  <!-- AUTOFORMATION -->
   <section id="autoformation" class="about reveal">
     <div class="section-head">
       <h3>Autoformation</h3>
@@ -371,13 +349,109 @@
     </div>
   </section>
 
-  <!-- ✅ 6 COMPÉTENCES BTS SIO (E5) -->
+  <!-- VEILLE -->
+  <section id="veille" class="showcase reveal">
+    <div class="section-head">
+      <h3>Veille technologique</h3>
+      <p>Une veille intégrée au portfolio, centrée sur un seul sujet : les failles zero-day et leur impact en environnement SISR.</p>
+    </div>
+
+    <div class="veille-wrap">
+      <section class="veille-section cardlike reveal">
+        <div class="veille-section__head">
+          <h2><i class="ri-bug-2-line"></i> Sujet retenu : Zero-day / vulnérabilités critiques</h2>
+          <p>Je surveille les vulnérabilités exploitées avant correctif public, car elles demandent une réaction rapide : identification, priorisation, mitigation puis patch.</p>
+        </div>
+
+        <div class="veille-grid">
+          <div class="veille-box">
+            <h3>Pourquoi ce sujet est important</h3>
+            <ul>
+              <li>Une zero-day peut permettre une compromission sans signature connue ni correctif immédiat.</li>
+              <li>Les cibles récentes concernent souvent des services exposés, appliances, serveurs applicatifs et équipements d’infrastructure.</li>
+              <li>En SISR, cela oblige à renforcer la supervision, le patch management, le cloisonnement et les procédures d’urgence.</li>
+            </ul>
+          </div>
+
+          <div class="veille-box">
+            <h3>Ce que je retiens pour le BTS SIO SISR</h3>
+            <ul>
+              <li>Prioriser les actifs exposés sur Internet et les comptes à privilèges.</li>
+              <li>Appliquer rapidement contournements, filtrage, isolement ou durcissement quand le patch n’est pas encore disponible.</li>
+              <li>Documenter les actions : veille, évaluation du risque, correctifs appliqués et contrôles réalisés.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="veille-section cardlike reveal">
+        <div class="veille-section__head">
+          <h2><i class="ri-radar-line"></i> Points importants observés sur les 6 derniers mois</h2>
+          <p>Synthèse propre et concise des éléments marquants à retenir pour l’oral et pour un contexte professionnel.</p>
+        </div>
+
+        <div class="veille-grid">
+          <div class="veille-box">
+            <h3>1) Hausse des attaques sur l’infrastructure</h3>
+            <p>Les acteurs offensifs ciblent de plus en plus des produits d’entreprise : VPN, appliances de sécurité, outils d’administration, serveurs métier et solutions de sauvegarde.</p>
+          </div>
+
+          <div class="veille-box">
+            <h3>2) SharePoint a marqué l’actualité</h3>
+            <p>En juillet 2025, Microsoft et la CISA ont publié des alertes sur l’exploitation active de vulnérabilités SharePoint on-premises, dont <strong>CVE-2025-53770</strong> et <strong>CVE-2025-53771</strong>, avec dépôt de webshell et vol de secrets serveur.</p>
+          </div>
+
+          <div class="veille-box">
+            <h3>3) Les appliances restent très visées</h3>
+            <p>Début 2026, Google/Mandiant a documenté l’exploitation de <strong>CVE-2026-22769</strong> sur Dell RecoverPoint for Virtual Machines, montrant que les équipements et solutions d’infrastructure restent des cibles majeures.</p>
+          </div>
+
+          <div class="veille-box">
+            <h3>4) La tendance générale se confirme</h3>
+            <p>Selon Google Threat Intelligence Group, 2025 confirme une pression élevée sur les zero-day, avec une part importante d’exploitation touchant les technologies d’entreprise plutôt que seulement les postes utilisateurs.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="veille-section cardlike reveal">
+        <div class="veille-section__head">
+          <h2><i class="ri-shield-check-line"></i> Impact en SISR et actions à mettre en place</h2>
+          <p>Ce sujet montre que la défense ne repose pas uniquement sur l’antivirus, mais sur une organisation technique complète.</p>
+        </div>
+
+        <div class="veille-grid">
+          <div class="veille-box">
+            <h3>Impact en SISR</h3>
+            <ul>
+              <li>Risque de prise de contrôle d’un service exposé ou d’un serveur interne.</li>
+              <li>Propagation possible vers l’AD, les comptes d’administration, les partages et les sauvegardes.</li>
+              <li>Interruption de service, fuite de données et perte de confiance des utilisateurs.</li>
+            </ul>
+          </div>
+
+          <div class="veille-box">
+            <h3>Mesures à retenir</h3>
+            <ul>
+              <li>Mettre à jour rapidement les systèmes concernés et suivre les alertes éditeurs / CISA.</li>
+              <li>Réduire la surface d’exposition : segmentation, restriction d’accès, MFA, moindre privilège.</li>
+              <li>Contrôler les journaux, rechercher les IoC, isoler les machines suspectes et tester les sauvegardes.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          <i class="ri-information-line"></i> Veille actualisée avec des faits marquants observés entre septembre 2025 et mars 2026.
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- 6 COMPÉTENCES BTS SIO (E5) -->
   <section id="competences-bts" class="bts6 reveal">
     <div class="section-head">
       <h3>6 compétences BTS SIO – preuves (E5)</h3>
       <p>Chaque compétence pointe vers des preuves : stages, projets, TP, veille.</p>
 
-      <!-- ✅ AJOUT : lien tableau Excel juste sous le texte -->
       <p style="margin-top: 0.8rem;">
         <a class="btn btn--secondary" href="Tableau_synthese_E5_Youssef_BERGAM_2026.xlsx" download target="_blank">
           📊 Télécharger mon tableau E5 (Excel)
@@ -410,11 +484,10 @@
         <p>Création et amélioration du portfolio (structure, preuves, téléchargement).</p>
         <div class="bts-links">
           <a class="bts-link" href="#hero">Portfolio (site)</a>
-          <a class="bts-link" href="veille.html">Page Veille</a>
+          <a class="bts-link" href="#veille">Veille intégrée</a>
         </div>
       </article>
 
-      <!-- ✅ MODIFIÉ : basé sur le 1er stage (Région IDF) -->
       <article class="bts-card reveal">
         <h4>4) Travailler en mode projet</h4>
         <p>
@@ -442,9 +515,9 @@
         <h4>6) Organiser son développement pro</h4>
         <p>Veille, autoformation, identité pro (LinkedIn/CV), capitalisation.</p>
         <div class="bts-links">
-          <a class="bts-link" href="veille.html">Veille</a>
+          <a class="bts-link" href="#veille">Veille</a>
           <a class="bts-link" href="#autoformation">Autoformation</a>
-          <a class="bts-link" href="#cv-lettre">CV & Lettre</a>
+          <a class="bts-link" href="CV%20professionnel%20gris%20simple%20(1).pdf" target="_blank" download>CV</a>
         </div>
       </article>
     </div>
@@ -467,15 +540,6 @@
         <i class="ri-linkedin-box-line"></i>
       </a>
     </p>
-
-    <div id="cv-lettre" class="cv-documents">
-      <h3>Téléchargements</h3>
-      <p>Vous pouvez consulter ou télécharger mes documents ci-dessous :</p>
-      <ul>
-        <li><a href="CV%20professionnel%20gris%20simple%20(1).pdf" download target="_blank">📄 Télécharger mon CV</a></li>
-        <li><a href="Lettre%20de%20motivation%20BERGAM%20SIO.pdf" download target="_blank">📄 Télécharger ma lettre de motivation</a></li>
-      </ul>
-    </div>
   </section>
 
   <footer class="footer">
@@ -489,25 +553,14 @@
       <a href="#stages">Stages</a>
       <a href="#projets">Projets</a>
       <a href="#competences">Compétences</a>
-
-      <!-- ✅ AJOUTS -->
       <a href="#autoformation">Autoformation</a>
+      <a href="#veille">Veille</a>
       <a href="#competences-bts">6 compétences (E5)</a>
-
-      <a href="veille.html">Veille</a>
       <a href="#contact">Contact</a>
-      <a href="#cv-lettre">CV & Lettre</a>
     </div>
   </footer>
 
   <script src="javascript.js" defer></script>
 </body>
 </html>
-
-
-  <script src="javascript.js" defer></script>
-</body>
-</html>
-
-
 
