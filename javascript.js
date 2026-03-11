@@ -51,11 +51,10 @@ document.addEventListener("DOMContentLoaded", () => {
   );
   revealEls.forEach((el) => revealObserver.observe(el));
 
-  // Scrollspy (compatible #id et index.html#id)
+  // Scrollspy
   const navLinks = document.querySelectorAll(".navbar__link");
 
-  // ✅ MODIFIÉ : ajout de autoformation
-  const sections = ["hero", "about", "stages", "projets", "competences", "autoformation", "contact", "competences-bts"]
+  const sections = ["hero", "about", "stages", "projets", "competences", "autoformation", "veille", "competences-bts", "contact"]
     .map(id => document.getElementById(id))
     .filter(Boolean);
 
