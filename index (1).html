@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="fr"> 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio de Youssef Bergam - BTS SIO SISR : stages, projets, TP, compétences." />
+
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <title>Portfolio de Youssef Bergam</title>
+
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+
+<body>
+  <div id="progress" aria-hidden="true"></div>
+
+  <button id="toTop" class="to-top" aria-label="Retour en haut">
+    <i class="ri-arrow-up-line"></i>
+  </button>
+
+  <div id="backdrop" class="backdrop" aria-hidden="true"></div>
+
+  <nav class="navbar" id="navbar">
+    <a href="#hero" class="navbar__logo"><i class="ri-code-s-slash-line"></i> Youssef.</a>
+
+    <div class="navbar__menu" id="navbarMenu">
+      <a href="#hero" class="navbar__link">Accueil</a>
+      <a href="#about" class="navbar__link">Profil</a>
+      <a href="#stages" class="navbar__link">Stages</a>
+      <a href="#projets" class="navbar__link">Projets</a>
+      <a href="#competences" class="navbar__link">Compétences</a>
+      <a href="#autoformation" class="navbar__link">Autoformation</a>
+      <a href="#veille" class="navbar__link">Veille</a>
+      <a href="#competences-bts" class="navbar__link">6 compétences (E5)</a>
+      <a href="#contact" class="navbar__link">Contact</a>
+    </div>
+
+    <div class="navbar__actions">
+      <div class="navbar__location">
+        <h5>France, Paris</h5>
+        <p id="heure">--:--</p>
+      </div>
+
+      <button class="btn" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">
+        Contactez-moi
+      </button>
+
+      <button class="navbar__toggle" id="menuToggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <i class="ri-menu-line"></i>
+      </button>
+    </div>
+  </nav>
+
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <a href="#hero" class="mobile-link">Accueil</a>
+    <a href="#about" class="mobile-link">Profil</a>
+    <a href="#stages" class="mobile-link">Stages</a>
+    <a href="#projets" class="mobile-link">Projets</a>
+    <a href="#competences" class="mobile-link">Compétences</a>
+    <a href="#autoformation" class="mobile-link">Autoformation</a>
+    <a href="#veille" class="mobile-link">Veille</a>
+    <a href="#competences-bts" class="mobile-link">6 compétences (E5)</a>
+    <a href="#contact" class="mobile-link">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <section id="hero" class="hero reveal">
+    <div class="hero__content">
+      <h2>Bonjour ! Je suis Youssef Bergam</h2>
+      <p class="hero__subtitle">Étudiant en BTS SIO (SISR) — systèmes, réseaux, support & cybersécurité</p>
+    </div>
+
+    <div class="hero__actions">
+      <button class="btn btn--secondary" onclick="document.getElementById('projets').scrollIntoView({ behavior: 'smooth' })">
+        Voir mes projets
+      </button>
+      <a class="btn" href="mailto:ybergam93@gmail.com">Envoyer un mail</a>
+      <a class="btn btn--secondary" href="#veille">Voir ma veille</a>
+    </div>
+
+    <div class="hero__socials">
+      <a href="https://www.linkedin.com/in/youssef-bergam-326b6636a" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <i class="ri-linkedin-box-line"></i>
+      </a>
+    </div>
+
+    <div class="hero__chips">
+      <span class="chip"><i class="ri-shield-check-line"></i> Cyber</span>
+      <span class="chip"><i class="ri-global-line"></i> Réseaux</span>
+      <span class="chip"><i class="ri-server-line"></i> Systèmes</span>
+      <span class="chip"><i class="ri-customer-service-2-line"></i> Support</span>
+    </div>
+  </section>
+
+  <!-- PROFIL -->
+  <section id="about" class="about reveal">
+    <div class="section-head">
+      <h3>Profil</h3>
+      <p>Un aperçu rapide pour situer le parcours et le positionnement.</p>
+      <p style="margin-top: 0.8rem;">
+        <a class="btn btn--secondary" href="CV%20professionnel%20gris%20simple%20(1).pdf" download target="_blank">📄 Télécharger mon CV</a>
+      </p>
+    </div>
+
+    <div class="cards">
+      <article class="card reveal">
+        <div class="card__icon"><i class="ri-user-3-line"></i></div>
+        <h4>Objectif</h4>
+        <p>Mettre en avant des réalisations concrètes : support, infra, réseau, sécurité et documentation.</p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__icon"><i class="ri-tools-line"></i></div>
+        <h4>Compétences</h4>
+        <p>Déploiement de postes, dépannage, configuration réseau (VLAN, NAT…), virtualisation, sécurité.</p>
+      </article>
+
+      <article class="card reveal">
+        <div class="card__icon"><i class="ri-file-text-line"></i></div>
+        <h4>Preuves</h4>
+        <p>Stages + projets + TP téléchargeables pour appuyer les compétences demandées en BTS.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- STAGES -->
+  <section id="stages" class="showcase reveal">
+    <div class="showcase__header">
+      <h3>Stages</h3>
+      <button class="btn" onclick="document.getElementById('projets').scrollIntoView({ behavior: 'smooth' })">
+        Voir les projets & TP
+      </button>
+    </div>
+
+    <div class="showcase_categories">
+      <!-- Stage n°1 -->
+      <section class="category reveal">
+        <div class="category__header">
+          <div class="category__title">
+            <i class="ri-folder-line"></i>
+            <h4>Stage n°1 - Région Île-de-France</h4>
+          </div>
+
+          <div class="category__desc">
+            <div class="stage-desc-top">
+              <div class="stage-desc-text">
+                <p>
+                  Stage n°1 à la <strong>Région Île-de-France</strong> (pôle <strong>Transformation Numérique</strong>),
+                  à Saint-Ouen, du <strong>26 mai au 27 juin 2025</strong>.
+                </p>
+
+                <p>
+                  Cette période de stage m’a permis de découvrir plus concrètement le fonctionnement d’un environnement
+                  informatique dans une grande administration publique, avec une approche à la fois organisationnelle,
+                  technique et documentaire. J’ai pu observer la manière dont les outils numériques sont suivis,
+                  structurés et intégrés dans les projets internes.
+                </p>
+
+                <ul>
+                  <li>Découverte du système d’information et de l’organisation du pôle Transformation Numérique</li>
+                  <li>Participation à des réunions d’équipe pour suivre l’avancement de projets et d’outils métiers</li>
+                  <li>Observation d’un projet de dématérialisation et de gestion documentaire</li>
+                  <li>Initiation aux enjeux de cybersécurité dans une administration publique</li>
+                  <li>Participation à des tâches de classement, de vérification et de suivi de documents numériques</li>
+                  <li>Appui sur des actions de test, de contrôle et de mise à jour dans un cadre professionnel</li>
+                  <li>Découverte des méthodes de travail en équipe, du suivi d’activité et de la communication professionnelle</li>
+                </ul>
+
+                <p>
+                  Ce stage m’a surtout permis de mieux comprendre la place du numérique dans une organisation publique :
+                  sécurité des données, méthodes de travail, importance de la documentation et coordination entre les équipes.
+                </p>
+
+                <p>📄 <a href="Rapport%20de%20stage.pdf" target="_blank" download>Télécharger mon rapport de stage (Région Île-de-France)</a></p>
+              </div>
+
+              <img class="stage-logo" src="logo-region-ile-de-france.png" alt="Logo Région Île-de-France">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stage n°2 -->
+      <section class="category reveal">
+        <div class="category__header">
+          <div class="category__title">
+            <i class="ri-folder-line"></i>
+            <h4>Stage n°2 - Université Paris Cité</h4>
+          </div>
+
+          <div class="category__desc">
+            <div class="stage-desc-top">
+              <div class="stage-desc-text">
+                <p>
+                  Stage n°2 du <strong>12 janvier au 20 février 2026</strong> :
+                  <strong>support informatique de proximité</strong> (déploiement, salles informatiques, réseau, maintenance, examens).
+                  <br><strong>Résumé mis à jour avec mes derniers jours (jusqu’au Jour 21).</strong>
+                </p>
+
+                <ul>
+                  <li>Préparation / reconditionnement : formatage de disques et <strong>installation Windows 11</strong> + scripts (plusieurs postes)</li>
+                  <li>Déploiement et paramétrage de PC (fixe + <strong>PC portables</strong>) + installation poste complet pour nouvel employé</li>
+                  <li>Support en salles : mise en place de <strong>sessions</strong> pour TP (L2) + installation de logiciels pour les cours/TP</li>
+                  <li>Dépannage matériel : diagnostic (slot RAM HS), interventions et maintenance</li>
+                  <li>Récupération de données : démontage de disque dur (port HS) + méthode “rescue” en cas de coupure électrique</li>
+                  <li>Réseau : (dé)brassage de ports en baies/switchs pour rétablir Internet + changement de port sur <strong>VLAN</strong> via console</li>
+                  <li>Impression : installation driver + création/paramétrage de la session sur l’imprimante (nouvel arrivant)</li>
+                  <li>Standardisation postes : création d’un <strong>compte admin local</strong> + compte utilisateur (sécurité) + logiciels de base (Firefox, Thunderbird, LibreOffice, etc.)</li>
+                  <li>Automatisation : recherche d’une méthode d’installation <strong>multi-utilisateurs</strong> (VS Code + extension Python) + rédaction d’un tutoriel</li>
+                  <li>Support pédagogique : paramétrage casque VR (Meta Quest 3 / HTC Vive) + correction d’un bug de collision dans une application de cours</li>
+                </ul>
+
+                <p style="margin-top: 0.8rem;">
+                  📄 <a href="Rapport%20de%20stage%20Youssef%20Bergam%20Paris%20cit%C3%A9.pdf" target="_blank" download>
+                    Télécharger mon rapport de stage (Université Paris Cité)
+                  </a>
+                </p>
+              </div>
+
+              <img class="stage-logo stage-logo--wide"
+                   src="universitepariscite-logo-horizontal-couleur-rvb.png"
+                   alt="Logo Université Paris Cité">
+              <div class="stage-media">
+  <h5>Illustrations du stage</h5>
+  <div class="shots-grid">
+    <figure class="shot">
+      <img src="IMG_5343.webp" alt="Bureaux de l'équipe">
+      <figcaption>Bureaux de l'équipe</figcaption>
+    </figure>
+
+    <figure class="shot">
+      <img src="IMG_5339.webp" alt="Mise à jour Windows de tous les PC d'une salle">
+      <figcaption>Mise à jour Windows de tous les PC d'une salle</figcaption>
+    </figure>
+
+    <figure class="shot">
+      <img src="IMG_5345.webp" alt="Mon bureau">
+      <figcaption>Mon bureau</figcaption>
+    </figure>
+
+    <figure class="shot">
+      <img src="IMG_5463.webp" alt="Baie réseau avec switchs">
+      <figcaption>Baie réseau avec switchs</figcaption>
+    </figure>
+
+    <figure class="shot">
+      <img src="IMG_5480.webp" alt="Paramétrage d'une imprimante">
+      <figcaption>Paramétrage d'une imprimante</figcaption>
+    </figure>
+  </div>
+</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- PROJETS -->
+  <section id="projets" class="projects reveal">
+    <div class="section-head">
+      <h3>Projets & TP</h3>
+      <p>Documents téléchargeables + réalisations pédagogiques.</p>
+    </div>
+
+    <div class="tp-downloads reveal">
+      <h5>Projets</h5>
+      <ul class="tp-list">
+        <li>
+          <a class="tp-link" href="GSB%20Mission%201.docx" download target="_blank">
+            📄 GSB Mission 1 – Préparation et déploiement d’un environnement de masterisation
+          </a>
+        </li>
+        <li>
+          <a class="tp-link" href="Doc%20technique%20GSB%20Mission%202.pdf" download target="_blank">
+            📄 GSB Mission 2 – Mise en place de l’architecture GSB en environnement virtuel
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="tp-downloads reveal">
+      <h5>Bloc 2 - Administration des systèmes et des réseaux</h5>
+      <ul class="tp-list">
+        <li><a class="tp-link" href="TP%200%20Youssef.docx" download target="_blank">📄 TP Maintenance et optimisation OS</a></li>
+        <li><a class="tp-link" href="TP%20NAT%20Youssef.docx" download target="_blank">📄 TP NAT / PAT</a></li>
+        <li><a class="tp-link" href="TP%20AD%20Youssef.docx" download target="_blank">📄 Active Directory</a></li>
+        <li><a class="tp-link" href="TP%20AD%202%20BERGAM%20Questions.docx" download target="_blank">📄 Active Directory 2</a></li>
+        <li><a class="tp-link" href="TP%20AD%203%20BERGAM.docx" download target="_blank">📄 Active Directory 3</a></li>
+        <li><a class="tp-link" href="AD4%20Youssef.docx" download target="_blank">📄 Active Directory 4</a></li>
+        <li><a class="tp-link" href="TP%204%20Routeur%20Youssef.docx" download target="_blank">📄 TP Routeur</a></li>
+      </ul>
+    </div>
+
+    <div class="tp-downloads reveal">
+      <h5>Cybersécurité</h5>
+      <ul class="tp-list">
+        <li><a class="tp-link" href="TP%20Tails.docx" download target="_blank">📄 TP Tails</a></li>
+        <li><a class="tp-link" href="TP%203%20CYBER%20Youssef.docx" download target="_blank">📄 TP Extensions</a></li>
+        <li><a class="tp-link" href="TP%204%20Cookie.docx" download target="_blank">📄 TP Cookie</a></li>
+        <li><a class="tp-link" href="Compte_Rendu_Youssef_Kali.docx" download target="_blank">📄 TP Kali</a></li>
+        <li><a class="tp-link" href="MAJ%20PC%20Youssef.xlsx" download target="_blank">📄 TP MAJ PC</a></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- COMPETENCES -->
+  <section id="competences" class="skills reveal">
+    <div class="skills__desc">
+      <h3>Compétences – BTS SIO (SISR)</h3>
+      <p>Support, systèmes, réseaux, sécurité, déploiement et documentation.</p>
+
+      <div class="skills__actions">
+        <a class="btn btn--secondary" href="mailto:ybergam93@gmail.com">Envoyer un mail</a>
+        <a class="btn btn--secondary" href="#veille">Veille technologique</a>
+      </div>
+    </div>
+
+    <div class="skills__stats">
+      <i class="ri-customer-service-2-line"></i>
+      <div class="skill__info">
+        <h5>Support & Incidents (N1)</h5>
+        <p>Diagnostic, résolution, assistance utilisateurs</p>
+      </div>
+
+      <i class="ri-windows-line"></i>
+      <div class="skill__info">
+        <h5>Systèmes</h5>
+        <p>Windows & Linux, maintenance, déploiement</p>
+      </div>
+
+      <i class="ri-global-line"></i>
+      <div class="skill__info">
+        <h5>Réseaux</h5>
+        <p>Routeurs, switches, VLAN, adressage IP</p>
+      </div>
+
+      <i class="ri-shield-check-line"></i>
+      <div class="skill__info">
+        <h5>Sécurité</h5>
+        <p>Bonnes pratiques, sensibilisation, éthique</p>
+      </div>
+
+      <i class="ri-server-line"></i>
+      <div class="skill__info">
+        <h5>Virtualisation</h5>
+        <p>VMware Workstation, VirtualBox</p>
+      </div>
+
+      <i class="ri-terminal-box-line"></i>
+      <div class="skill__info">
+        <h5>Déploiement & Scripts</h5>
+        <p>Installation logiciels via scripts, préparation de postes</p>
+      </div>
+
+      <i class="ri-file-text-line"></i>
+      <div class="skill__info">
+        <h5>Documentation & Suivi</h5>
+        <p>Documentation technique, suivi de demandes (ITSM)</p>
+      </div>
+
+      <i class="ri-code-box-line"></i>
+      <div class="skill__info">
+        <h5>Web (bases)</h5>
+        <p>HTML, CSS (notions)</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUTOFORMATION -->
+  <section id="autoformation" class="about reveal">
+  <div class="section-head">
+    <h3>Autoformation</h3>
+    <p>Formations et apprentissages personnels (complément du BTS SIO SISR).</p>
+  </div>
+
+  <div class="cards">
+    <article class="card reveal">
+      <div class="card__icon"><i class="ri-windows-line"></i></div>
+      <h4>Windows / AD</h4>
+      <p>Approfondissement : comptes, GPO, bonnes pratiques, dépannage et administration.</p>
+    </article>
+
+    <article class="card reveal">
+      <div class="card__icon"><i class="ri-global-line"></i></div>
+      <h4>Réseaux</h4>
+      <p>Adressage IP, VLAN, NAT/PAT, diagnostic connectique et équipements.</p>
+    </article>
+
+    <article class="card reveal">
+      <div class="card__icon"><i class="ri-shield-check-line"></i></div>
+      <h4>Cybersécurité</h4>
+      <p>Notions : durcissement, mises à jour, hygiène numérique, incidents (malwares).</p>
+    </article>
+
+    <article class="card reveal">
+      <div class="card__icon"><i class="ri-award-line"></i></div>
+      <h4>Certification PIX</h4>
+      <p>Certification obtenue pour valider mes compétences numériques : environnement numérique, sécurité, collaboration et usages professionnels.</p>
+      <p style="margin-top: 0.8rem;">
+        <a class="btn btn--secondary" href="CEPC_250493100860_B.pdf" target="_blank" download>
+          📄 Voir ma certification PIX
+        </a>
+      </p>
+    </article>
+  </div>
+</section>
+
+  <!-- VEILLE -->
+  <section id="veille" class="showcase reveal">
+    <div class="section-head">
+      <h3>Veille technologique</h3>
+      <p>Une veille intégrée au portfolio, centrée sur les failles zero-day, avec une sélection d’articles précis et datés pour montrer les impacts techniques, organisationnels et sécuritaires en environnement SISR.</p>
+    </div>
+
+    <div class="veille-wrap">
+      <section class="veille-section cardlike reveal">
+        <div class="veille-section__head">
+          <h2><i class="ri-bug-2-line"></i> Sujet retenu : Zero-day / vulnérabilités critiques</h2>
+          <p>Je surveille les vulnérabilités exploitées avant correctif public, car elles demandent une réaction rapide : identification, priorisation, mitigation puis patch.</p>
+        </div>
+
+        <div class="veille-grid">
+          <div class="veille-box">
+            <h3>Pourquoi ce sujet est important</h3>
+            <ul>
+              <li>Une zero-day peut permettre une compromission sans signature connue ni correctif immédiat.</li>
+              <li>Les cibles récentes concernent souvent des services exposés, appliances, serveurs applicatifs et équipements d’infrastructure.</li>
+              <li>En SISR, cela oblige à renforcer la supervision, le patch management, le cloisonnement et les procédures d’urgence.</li>
+            </ul>
+          </div>
+
+          <div class="veille-box">
+            <h3>Ce que je retiens</h3>
+            <ul>
+              <li>Prioriser les actifs exposés sur Internet et les comptes à privilèges.</li>
+              <li>Appliquer rapidement contournements, filtrage, isolement ou durcissement quand le patch n’est pas encore disponible.</li>
+              <li>Documenter les actions : veille, évaluation du risque, correctifs appliqués et contrôles réalisés.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="veille-section cardlike reveal">
+        <div class="veille-section__head">
+          <h2><i class="ri-radar-line"></i> Points importants observés</h2>
+          <p>Synthèse claire avec références datées vers des articles précis sur les zero-day et leur impact en environnement professionnel.</p>
+        </div>
+
+        <div class="veille-grid">
+          <div class="veille-box">
+            <h3>19 juillet 2025 – Microsoft (CVE-2025-53770)</h3>
+            <p>
+              Microsoft publie une guidance de sécurité sur la vulnérabilité <strong>CVE-2025-53770</strong> touchant
+              SharePoint on-premises, avec recommandation de mise à jour et de rotation des clés machine.
+            </p>
+            <p>
+              🔗 <a href="https://www.microsoft.com/en-us/msrc/blog/2025/07/customer-guidance-for-sharepoint-vulnerability-cve-2025-53770" target="_blank" rel="noopener noreferrer">
+                Lire l’article Microsoft – 19/07/2025
+              </a>
+            </p>
+          </div>
+
+          <div class="veille-box">
+            <h3>22 juillet 2025 – Microsoft (exploitation active SharePoint)</h3>
+            <p>
+              Microsoft confirme l’exploitation active de vulnérabilités SharePoint on-premises et explique que
+              les mises à jour corrigent notamment <strong>CVE-2025-53770</strong> et <strong>CVE-2025-53771</strong>.
+            </p>
+            <p>
+              🔗 <a href="https://www.microsoft.com/en-us/security/blog/2025/07/22/disrupting-active-exploitation-of-on-premises-sharepoint-vulnerabilities/" target="_blank" rel="noopener noreferrer">
+                Lire l’article Microsoft Security – 22/07/2025
+              </a>
+            </p>
+          </div>
+
+          <div class="veille-box">
+            <h3>6 août 2025 – CISA (rapport d’analyse)</h3>
+            <p>
+              La CISA publie un rapport d’analyse malware lié aux vulnérabilités SharePoint. Ce point est important
+              car il montre des éléments concrets d’exploitation, dont des fichiers malveillants et des indicateurs
+              techniques utiles à la détection.
+            </p>
+            <p>
+              🔗 <a href="https://www.cisa.gov/news-events/alerts/2025/08/06/cisa-releases-malware-analysis-report-associated-microsoft-sharepoint-vulnerabilities" target="_blank" rel="noopener noreferrer">
+                Lire l’alerte CISA – 06/08/2025
+              </a>
+            </p>
+          </div>
+
+          <div class="veille-box">
+            <h3>17 février 2026 – Google / Mandiant (CVE-2026-22769)</h3>
+            <p>
+              Google Threat Intelligence Group et Mandiant documentent l’exploitation de
+              <strong>CVE-2026-22769</strong> sur <strong>Dell RecoverPoint for Virtual Machines</strong>.
+              Cela confirme que les appliances et solutions d’infrastructure restent des cibles majeures.
+            </p>
+            <p>
+              🔗 <a href="https://cloud.google.com/blog/topics/threat-intelligence/unc6201-exploiting-dell-recoverpoint-zero-day" target="_blank" rel="noopener noreferrer">
+                Lire l’article Google / Mandiant – 17/02/2026
+              </a>
+            </p>
+          </div>
+
+          <div class="veille-box">
+            <h3>17 février 2026 – Dell (avis sécurité)</h3>
+            <p>
+              Dell publie son avis de sécurité officiel sur les versions affectées et les remédiations à appliquer
+              pour RecoverPoint for Virtual Machines.
+            </p>
+            <p>
+              🔗 <a href="https://www.dell.com/support/kbdoc/en-us/000426773/dsa-2026-079" target="_blank" rel="noopener noreferrer">
+                Lire l’avis Dell – 17/02/2026
+              </a>
+            </p>
+          </div>
+
+          <div class="veille-box">
+            <h3>5 mars 2026 – Google Threat Intelligence Group</h3>
+            <p>
+              Dans son bilan 2025 des zero-day, GTIG indique qu’une part importante des vulnérabilités exploitées
+              vise les technologies d’entreprise et les appliances, ce qui confirme une tendance forte pour les environnements SISR.
+            </p>
+            <p>
+              🔗 <a href="https://cloud.google.com/blog/topics/threat-intelligence/2025-zero-day-review" target="_blank" rel="noopener noreferrer">
+                Lire l’analyse GTIG – 05/03/2026
+              </a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="veille-section cardlike reveal">
+        <div class="veille-section__head">
+          <h2><i class="ri-shield-check-line"></i> Impact en SISR et actions à mettre en place</h2>
+          <p>Ce sujet montre que la défense ne repose pas uniquement sur l’antivirus, mais sur une organisation technique complète.</p>
+        </div>
+
+        <div class="veille-grid">
+          <div class="veille-box">
+            <h3>Impact en SISR</h3>
+            <ul>
+              <li>Risque de prise de contrôle d’un service exposé ou d’un serveur interne.</li>
+              <li>Propagation possible vers l’AD, les comptes d’administration, les partages et les sauvegardes.</li>
+              <li>Interruption de service, fuite de données et perte de confiance des utilisateurs.</li>
+            </ul>
+          </div>
+
+          <div class="veille-box">
+            <h3>Mesures à retenir</h3>
+            <ul>
+              <li>Mettre à jour rapidement les systèmes concernés et suivre les alertes éditeurs / CISA.</li>
+              <li>Réduire la surface d’exposition : segmentation, restriction d’accès, MFA, moindre privilège.</li>
+              <li>Contrôler les journaux, rechercher les IoC, isoler les machines suspectes et tester les sauvegardes.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="note">
+          <i class="ri-information-line"></i> Veille actualisée avec des faits marquants observés entre juillet 2025 et mars 2026.
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <!-- 6 COMPÉTENCES BTS SIO (E5) -->
+  <section id="competences-bts" class="bts6 reveal">
+    <div class="section-head">
+      <h3>6 compétences BTS SIO – preuves (E5)</h3>
+      <p>Chaque compétence pointe vers des preuves : stages, projets, TP, veille.</p>
+
+      <p style="margin-top: 0.8rem;">
+        <a class="btn btn--secondary" href="Tableau_synthese_E5_Youssef_BERGAM_2026 .xlsx" download target="_blank">
+          📊 Télécharger mon tableau E5 (Excel)
+        </a>
+      </p>
+    </div>
+
+    <div class="bts-grid">
+      <article class="bts-card reveal">
+        <h4>1) Gérer le patrimoine informatique</h4>
+        <p>Maintenance, inventaire, matériel, continuité, sécurité de base.</p>
+        <div class="bts-links">
+          <a class="bts-link" href="#stages">Stage (matériel / réseau / onduleurs)</a>
+          <a class="bts-link" href="TP%20AD%20Youssef.docx" target="_blank" download>TP Active Directory</a>
+          <a class="bts-link" href="TP%20NAT%20Youssef.docx" target="_blank" download>TP NAT/PAT</a>
+        </div>
+      </article>
+
+      <article class="bts-card reveal">
+        <h4>2) Répondre aux incidents & demandes</h4>
+        <p>Support utilisateurs, dépannage imprimantes, sessions, réseau, périphériques.</p>
+        <div class="bts-links">
+          <a class="bts-link" href="#stages">Stage (support proximité)</a>
+          <a class="bts-link" href="#contact">Contact / posture pro</a>
+        </div>
+      </article>
+
+      <article class="bts-card reveal">
+        <h4>3) Développer la présence en ligne</h4>
+        <p>Création et amélioration du portfolio (structure, preuves, téléchargement).</p>
+        <div class="bts-links">
+          <a class="bts-link" href="#hero">Portfolio (site)</a>
+          <a class="bts-link" href="#veille">Veille intégrée</a>
+        </div>
+      </article>
+
+      <article class="bts-card reveal">
+        <h4>4) Travailler en mode projet</h4>
+        <p>
+          Participation à la vie d’un pôle numérique : réunions de suivi, observation d’un projet de
+          dématérialisation, compréhension des étapes d’un projet (besoin → solutions → tests → validation)
+          et appui sur des tâches techniques/documentaires.
+        </p>
+        <div class="bts-links">
+          <a class="bts-link" href="#stages">Stage 1 (Région IDF / suivi projets)</a>
+          <a class="bts-link" href="Rapport%20de%20stage.pdf" target="_blank" download>Rapport de stage (PDF)</a>
+          <a class="bts-link" href="#projets">Projets & TP (preuves)</a>
+        </div>
+      </article>
+
+      <article class="bts-card reveal">
+        <h4>5) Mettre à disposition un service</h4>
+        <p>Déploiement de postes, installation via scripts, mise en production pour utilisateurs.</p>
+        <div class="bts-links">
+          <a class="bts-link" href="#stages">Stage (déploiement postes)</a>
+          <a class="bts-link" href="#projets">TP systèmes/réseaux</a>
+        </div>
+      </article>
+
+      <article class="bts-card reveal">
+        <h4>6) Organiser son développement pro</h4>
+        <p>Veille, autoformation, identité pro (LinkedIn/CV), capitalisation.</p>
+        <div class="bts-links">
+          <a class="bts-link" href="#veille">Veille</a>
+          <a class="bts-link" href="#autoformation">Autoformation</a>
+          <a class="bts-link" href="CV%20professionnel%20gris%20simple%20(1).pdf" target="_blank" download>CV</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact reveal">
+    <h5>Vous avez un projet ?</h5>
+    <h2>Contactez-moi !</h2>
+
+    <a class="btn" href="mailto:ybergam93@gmail.com">Envoyer un message</a>
+
+    <p>Email : <a href="mailto:ybergam93@gmail.com"><span>ybergam93@gmail.com</span></a></p>
+
+    <p>
+      LinkedIn :
+      <a href="https://www.linkedin.com/in/youssef-bergam-326b6636a"
+         target="_blank" rel="noopener noreferrer"
+         style="font-size: 24px; color: #0077b5; vertical-align: middle;">
+        <i class="ri-linkedin-box-line"></i>
+      </a>
+    </p>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__brand">
+      <a href="#hero">Youssef.</a>
+      <p>© 2025 Youssef Bergam - Portfolio BTS SIO.</p>
+    </div>
+    <div class="footer__links">
+      <a href="#hero">Accueil</a>
+      <a href="#about">Profil</a>
+      <a href="#stages">Stages</a>
+      <a href="#projets">Projets</a>
+      <a href="#competences">Compétences</a>
+      <a href="#autoformation">Autoformation</a>
+      <a href="#veille">Veille</a>
+      <a href="#competences-bts">6 compétences (E5)</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </footer>
+
+  <script src="javascript.js" defer></script>
+</body>
+</html>
+
+
+
