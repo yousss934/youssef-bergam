@@ -411,161 +411,165 @@
 </section>
 
   <!-- VEILLE -->
-  <section id="veille" class="showcase reveal">
-    <div class="section-head">
-      <h3>Veille technologique</h3>
-      <p>Une vulnérabilité zero day (ou 0-day) est un risques de sécurité dans un logiciel qui n'est pas connu publiquement et dont le fournisseur n'a pas connaissance</p>
+  <section class="veille-section cardlike reveal">
+  <div class="veille-section__head">
+    <h2><i class="ri-bug-2-line"></i> Sujet retenu : Zero-day / vulnérabilités critiques</h2>
+    <p>Je surveille les vulnérabilités exploitées avant correctif public, car elles demandent une réaction rapide : identification, priorisation, mitigation puis patch.</p>
+  </div>
+
+  <div class="veille-grid">
+    <div class="veille-box">
+      <h3>Pourquoi ce sujet est important</h3>
+      <ul>
+        <li>Une zero-day peut permettre une compromission sans signature connue ni correctif immédiat.</li>
+        <li>Les cibles récentes concernent souvent des services exposés, appliances, serveurs applicatifs et équipements d’infrastructure.</li>
+        <li>En SISR, cela oblige à renforcer la supervision, le patch management, le cloisonnement et les procédures d’urgence.</li>
+      </ul>
     </div>
 
-    <div class="veille-wrap">
-      <section class="veille-section cardlike reveal">
-        <div class="veille-section__head">
-          <h2><i class="ri-bug-2-line"></i> Sujet retenu : Zero-day / vulnérabilités critiques</h2>
-          <p>Je surveille les vulnérabilités exploitées avant correctif public, car elles demandent une réaction rapide : identification, priorisation, mitigation puis patch.</p>
-        </div>
-
-        <div class="veille-grid">
-          <div class="veille-box">
-            <h3>Pourquoi ce sujet est important</h3>
-            <ul>
-              <li>Une zero-day peut permettre une compromission sans signature connue ni correctif immédiat.</li>
-              <li>Les cibles récentes concernent souvent des services exposés, appliances, serveurs applicatifs et équipements d’infrastructure.</li>
-              <li>En SISR, cela oblige à renforcer la supervision, le patch management, le cloisonnement et les procédures d’urgence.</li>
-            </ul>
-          </div>
-
-          <div class="veille-box">
-            <h3>Ce que je retiens</h3>
-            <ul>
-              <li>Prioriser les actifs exposés sur Internet et les comptes à privilèges.</li>
-              <li>Appliquer rapidement contournements, filtrage, isolement ou durcissement quand le patch n’est pas encore disponible.</li>
-              <li>Documenter les actions : veille, évaluation du risque, correctifs appliqués et contrôles réalisés.</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <section class="veille-section cardlike reveal">
-        <div class="veille-section__head">
-          <h2><i class="ri-radar-line"></i> Points importants observés</h2>
-          <p>Synthèse claire avec références datées vers des articles précis sur les zero-day et leur impact en environnement professionnel.</p>
-        </div>
-
-        <div class="veille-grid">
-          <div class="veille-box">
-            <h3>19 juillet 2025 – Microsoft (CVE-2025-53770)</h3>
-            <p>
-              Microsoft publie une guidance de sécurité sur la vulnérabilité <strong>CVE-2025-53770</strong> touchant
-              SharePoint on-premises, avec recommandation de mise à jour et de rotation des clés machine.
-            </p>
-            <p>
-              🔗 <a href="https://www.microsoft.com/en-us/msrc/blog/2025/07/customer-guidance-for-sharepoint-vulnerability-cve-2025-53770" target="_blank" rel="noopener noreferrer">
-                Lire l’article Microsoft – 19/07/2025
-              </a>
-            </p>
-          </div>
-
-          <div class="veille-box">
-            <h3>22 juillet 2025 – Microsoft (exploitation active SharePoint)</h3>
-            <p>
-              Microsoft confirme l’exploitation active de vulnérabilités SharePoint on-premises et explique que
-              les mises à jour corrigent notamment <strong>CVE-2025-53770</strong> et <strong>CVE-2025-53771</strong>.
-            </p>
-            <p>
-              🔗 <a href="https://www.microsoft.com/en-us/security/blog/2025/07/22/disrupting-active-exploitation-of-on-premises-sharepoint-vulnerabilities/" target="_blank" rel="noopener noreferrer">
-                Lire l’article Microsoft Security – 22/07/2025
-              </a>
-            </p>
-          </div>
-
-          <div class="veille-box">
-            <h3>6 août 2025 – CISA (rapport d’analyse)</h3>
-            <p>
-              La CISA publie un rapport d’analyse malware lié aux vulnérabilités SharePoint. Ce point est important
-              car il montre des éléments concrets d’exploitation, dont des fichiers malveillants et des indicateurs
-              techniques utiles à la détection.
-            </p>
-            <p>
-              🔗 <a href="https://www.cisa.gov/news-events/alerts/2025/08/06/cisa-releases-malware-analysis-report-associated-microsoft-sharepoint-vulnerabilities" target="_blank" rel="noopener noreferrer">
-                Lire l’alerte CISA – 06/08/2025
-              </a>
-            </p>
-          </div>
-
-          <div class="veille-box">
-            <h3>17 février 2026 – Google / Mandiant (CVE-2026-22769)</h3>
-            <p>
-              Google Threat Intelligence Group et Mandiant documentent l’exploitation de
-              <strong>CVE-2026-22769</strong> sur <strong>Dell RecoverPoint for Virtual Machines</strong>.
-              Cela confirme que les appliances et solutions d’infrastructure restent des cibles majeures.
-            </p>
-            <p>
-              🔗 <a href="https://cloud.google.com/blog/topics/threat-intelligence/unc6201-exploiting-dell-recoverpoint-zero-day" target="_blank" rel="noopener noreferrer">
-                Lire l’article Google / Mandiant – 17/02/2026
-              </a>
-            </p>
-          </div>
-
-          <div class="veille-box">
-            <h3>17 février 2026 – Dell (avis sécurité)</h3>
-            <p>
-              Dell publie son avis de sécurité officiel sur les versions affectées et les remédiations à appliquer
-              pour RecoverPoint for Virtual Machines.
-            </p>
-            <p>
-              🔗 <a href="https://www.dell.com/support/kbdoc/en-us/000426773/dsa-2026-079" target="_blank" rel="noopener noreferrer">
-                Lire l’avis Dell – 17/02/2026
-              </a>
-            </p>
-          </div>
-
-          <div class="veille-box">
-            <h3>5 mars 2026 – Google Threat Intelligence Group</h3>
-            <p>
-              Dans son bilan 2025 des zero-day, GTIG indique qu’une part importante des vulnérabilités exploitées
-              vise les technologies d’entreprise et les appliances, ce qui confirme une tendance forte pour les environnements SISR.
-            </p>
-            <p>
-              🔗 <a href="https://cloud.google.com/blog/topics/threat-intelligence/2025-zero-day-review" target="_blank" rel="noopener noreferrer">
-                Lire l’analyse GTIG – 05/03/2026
-              </a>
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section class="veille-section cardlike reveal">
-        <div class="veille-section__head">
-          <h2><i class="ri-shield-check-line"></i> Impact en SISR et actions à mettre en place</h2>
-          <p>Ce sujet montre que la défense ne repose pas uniquement sur l’antivirus, mais sur une organisation technique complète.</p>
-        </div>
-
-        <div class="veille-grid">
-          <div class="veille-box">
-            <h3>Impact en SISR</h3>
-            <ul>
-              <li>Risque de prise de contrôle d’un service exposé ou d’un serveur interne.</li>
-              <li>Propagation possible vers l’AD, les comptes d’administration, les partages et les sauvegardes.</li>
-              <li>Interruption de service, fuite de données et perte de confiance des utilisateurs.</li>
-            </ul>
-          </div>
-
-          <div class="veille-box">
-            <h3>Mesures à retenir</h3>
-            <ul>
-              <li>Mettre à jour rapidement les systèmes concernés et suivre les alertes éditeurs / CISA.</li>
-              <li>Réduire la surface d’exposition : segmentation, restriction d’accès, MFA, moindre privilège.</li>
-              <li>Contrôler les journaux, rechercher les IoC, isoler les machines suspectes et tester les sauvegardes.</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="note">
-          <i class="ri-information-line"></i> Veille actualisée avec des faits marquants observés entre juillet 2025 et mars 2026.
-        </div>
-      </section>
+    <div class="veille-box">
+      <h3>Ce que je retiens</h3>
+      <ul>
+        <li>Prioriser les actifs exposés sur Internet et les comptes à privilèges.</li>
+        <li>Appliquer rapidement contournements, filtrage, isolement ou durcissement quand le patch n’est pas encore disponible.</li>
+        <li>Documenter les actions : veille, évaluation du risque, correctifs appliqués et contrôles réalisés.</li>
+      </ul>
     </div>
-  </section>
+  </div>
+</section>
+
+<section class="veille-section cardlike reveal">
+  <div class="veille-section__head">
+    <h2><i class="ri-search-eye-line"></i> Méthode de veille</h2>
+    <p>Pour suivre l’actualité des vulnérabilités zero-day, j’utilise une méthode de veille simple et régulière à partir d’alertes automatiques et de sources spécialisées.</p>
+  </div>
+
+  <div class="veille-grid">
+    <div class="veille-box">
+      <h3>Ma méthode</h3>
+      <ul>
+        <li>Création d’une alerte Google Alerts avec le mot-clé <strong>« Zero-day »</strong>.</li>
+        <li>Réception automatique d’articles récents liés aux vulnérabilités critiques.</li>
+        <li>Tri des résultats pour conserver les informations utiles et fiables.</li>
+        <li>Vérification et complément avec des sources reconnues : Microsoft Security, CISA, Dell et Google / Mandiant.</li>
+      </ul>
+    </div>
+
+    <div class="veille-box">
+      <h3>Objectif</h3>
+      <p>
+        Cette méthode me permet d’identifier rapidement les nouvelles menaces, de suivre leur évolution
+        et de sélectionner les informations les plus pertinentes pour un contexte SISR.
+      </p>
+    </div>
+  </div>
+
+  <div class="stage-media">
+    <h5>Exemple d’outil utilisé pour ma veille</h5>
+    <div class="shots-grid">
+      <figure class="shot">
+        <img src="Capture d'écran 2026-03-13 151141.png" alt="Capture d’écran Google Alerts sur le thème Zero-day">
+        <figcaption>
+          Capture d’écran de Google Alerts utilisée pour surveiller les publications liées aux zero-day.
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+
+  <div class="note">
+    <i class="ri-information-line"></i>
+    Cette alerte me permet de recevoir automatiquement de nouveaux articles sur les vulnérabilités zero-day et d’alimenter ma veille technologique.
+  </div>
+</section>
+
+<section class="veille-section cardlike reveal">
+  <div class="veille-section__head">
+    <h2><i class="ri-radar-line"></i> Points importants observés</h2>
+    <p>Synthèse claire avec références datées vers des articles précis sur les zero-day et leur impact en environnement professionnel.</p>
+  </div>
+
+  <div class="veille-grid">
+    <div class="veille-box">
+      <h3>19 juillet 2025 – Microsoft (CVE-2025-53770)</h3>
+      <p>
+        Microsoft publie une guidance de sécurité sur la vulnérabilité <strong>CVE-2025-53770</strong> touchant
+        SharePoint on-premises, avec recommandation de mise à jour et de rotation des clés machine.
+      </p>
+      <p>
+        🔗 <a href="https://www.microsoft.com/en-us/msrc/blog/2025/07/customer-guidance-for-sharepoint-vulnerability-cve-2025-53770" target="_blank" rel="noopener noreferrer">
+          Lire l’article Microsoft – 19/07/2025
+        </a>
+      </p>
+    </div>
+
+    <div class="veille-box">
+      <h3>22 juillet 2025 – Microsoft (exploitation active SharePoint)</h3>
+      <p>
+        Microsoft confirme l’exploitation active de vulnérabilités SharePoint on-premises et explique que
+        les mises à jour corrigent notamment <strong>CVE-2025-53770</strong> et <strong>CVE-2025-53771</strong>.
+      </p>
+      <p>
+        🔗 <a href="https://www.microsoft.com/en-us/security/blog/2025/07/22/disrupting-active-exploitation-of-on-premises-sharepoint-vulnerabilities/" target="_blank" rel="noopener noreferrer">
+          Lire l’article Microsoft Security – 22/07/2025
+        </a>
+      </p>
+    </div>
+
+    <div class="veille-box">
+      <h3>6 août 2025 – CISA (rapport d’analyse)</h3>
+      <p>
+        La CISA publie un rapport d’analyse malware lié aux vulnérabilités SharePoint. Ce point est important
+        car il montre des éléments concrets d’exploitation, dont des fichiers malveillants et des indicateurs
+        techniques utiles à la détection.
+      </p>
+      <p>
+        🔗 <a href="https://www.cisa.gov/news-events/alerts/2025/08/06/cisa-releases-malware-analysis-report-associated-microsoft-sharepoint-vulnerabilities" target="_blank" rel="noopener noreferrer">
+          Lire l’alerte CISA – 06/08/2025
+        </a>
+      </p>
+    </div>
+
+    <div class="veille-box">
+      <h3>17 février 2026 – Google / Mandiant (CVE-2026-22769)</h3>
+      <p>
+        Google Threat Intelligence Group et Mandiant documentent l’exploitation de
+        <strong>CVE-2026-22769</strong> sur <strong>Dell RecoverPoint for Virtual Machines</strong>.
+        Cela confirme que les appliances et solutions d’infrastructure restent des cibles majeures.
+      </p>
+      <p>
+        🔗 <a href="https://cloud.google.com/blog/topics/threat-intelligence/unc6201-exploiting-dell-recoverpoint-zero-day" target="_blank" rel="noopener noreferrer">
+          Lire l’article Google / Mandiant – 17/02/2026
+        </a>
+      </p>
+    </div>
+
+    <div class="veille-box">
+      <h3>17 février 2026 – Dell (avis sécurité)</h3>
+      <p>
+        Dell publie son avis de sécurité officiel sur les versions affectées et les remédiations à appliquer
+        pour RecoverPoint for Virtual Machines.
+      </p>
+      <p>
+        🔗 <a href="https://www.dell.com/support/kbdoc/en-us/000426773/dsa-2026-079" target="_blank" rel="noopener noreferrer">
+          Lire l’avis Dell – 17/02/2026
+        </a>
+      </p>
+    </div>
+
+    <div class="veille-box">
+      <h3>5 mars 2026 – Google Threat Intelligence Group</h3>
+      <p>
+        Dans son bilan 2025 des zero-day, GTIG indique qu’une part importante des vulnérabilités exploitées
+        vise les technologies d’entreprise et les appliances, ce qui confirme une tendance forte pour les environnements SISR.
+      </p>
+      <p>
+        🔗 <a href="https://cloud.google.com/blog/topics/threat-intelligence/2025-zero-day-review" target="_blank" rel="noopener noreferrer">
+          Lire l’analyse GTIG – 05/03/2026
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
 
   <!-- 6 COMPÉTENCES BTS SIO (E5) -->
   <section id="competences-bts" class="bts6 reveal">
@@ -684,6 +688,7 @@
   <script src="javascript.js" defer></script>
 </body>
 </html>
+
 
 
 
