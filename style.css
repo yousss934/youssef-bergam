@@ -859,3 +859,41 @@ body{
     height: 220px;
   }
 }
+
+
+.veille-simple{
+  background: rgba(74,222,128,.10);
+  border: 1px solid rgba(34,197,94,.22);
+  border-radius: 14px;
+  padding: .9rem 1rem;
+  color: var(--text) !important;
+  font-weight: 700;
+  margin-bottom: .9rem;
+}
+
+.shots-grid--single{
+  grid-template-columns: 1fr;
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.shot--alert{
+  max-width: 950px;
+  margin: 0 auto;
+}
+
+.shot__alert-img{
+  width: 100%;
+  height: auto;
+  max-height: 520px;
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: #f8fafc;
+}
+
+
+/* Ancres de navigation */
+section[id],
+.veille-section[id]{
+  scroll-margin-top: 96px;
+}
