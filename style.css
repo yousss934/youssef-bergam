@@ -918,3 +918,25 @@ section[id],
     object-position: center 72% !important;
   }
 }
+
+
+/* Illustrations stage 1 */
+.shots-grid--stage1{
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.stage-media--stage1 .shot img{
+  height: 235px;
+  object-fit: cover;
+  object-position: center center;
+}
+
+@media (max-width: 900px){
+  .shots-grid--stage1{
+    grid-template-columns: 1fr;
+  }
+
+  .stage-media--stage1 .shot img{
+    height: 220px;
+  }
+}
